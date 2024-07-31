@@ -2,9 +2,10 @@ const http = require("http")
 const socket = require("websocket").server
 const server = http.createServer(() => {
 })
+const port = process.env.PORT || 3031;
+server.listen(port, () => {
 
-server.listen(3000, () => {
-
+    console.log(`running signaling server on ${port}`)
 })
 
 const users = []
